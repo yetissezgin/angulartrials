@@ -1,0 +1,20 @@
+<section>
+    <div class="container">
+        <mat-form-field class="example-full-width" [style.width.vw]=45>
+            <mat-label>Add todo</mat-label>
+            <input matInput placeholder="calling Jim at 10pm" [(ngModel)]="todo" (keyup.enter)="addTodo()">
+        </mat-form-field>
+        <button mat-raised-button color="primary" [style.width.vw]=10 (click)="addTodo()">Add Todo</button>
+    </div>
+    <div class="list-container">
+
+        <mat-selection-list [multiple]="false">
+            <mat-list-option *ngFor="let todoItem of todoList; let i = index">
+                    <span>{{todoItem.title}}</span>
+                    <div (click)="deleteTodo(todoItem)">
+                        <mat-icon>delete</mat-icon>
+                    </div>
+            </mat-list-option>
+        </mat-selection-list>
+    </div>
+</section>

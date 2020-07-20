@@ -3,8 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  // endpoint: "http://localhost:3435/"
+  endpoint: "https://jsonplaceholder.typicode.com/todos/"
 };
+
+export const ortam = {
+  url: 'baris'
+}
 
 /*
  * For easier debugging in development mode, you can import the following file
